@@ -10,7 +10,7 @@ N8N_WEBHOOK_URL = "https://ridezoomo.app.n8n.cloud/webhook/conversational-copy"
 # Set page config first (must be the first Streamlit command)
 st.set_page_config(
     page_title="Zoomo's Copywriter",
-    page_icon="🤖",
+    page_icon="assets/zoomo_logo.png",  # Use the Zoomo logo as favicon
 )
 
 # Create a clean title with logo
