@@ -36,7 +36,7 @@ Hey there! I'm here to help you craft killer Zoomo-branded content that converts
 - **Channel**: Email, SMS, WhatsApp, Push Notification, Web Copy, Social Media, etc
 - *Optional*: Desired length, key points to include, any other creative direction
 
-The more details you share, the more spot-on your copy will be! Let's create something awesome together ✨
+The more details you share, the more *spot-on* your copy will be! So don't be lazy & let's create something awesome together ✨
 """)
 
 # Display chat messages from history on app rerun
