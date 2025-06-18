@@ -23,9 +23,8 @@ if "messages" not in st.session_state:
 if "sessionId" not in st.session_state:
     st.session_state.sessionId = str(uuid.uuid4()) # Generate a unique session ID for this browser session
 
-# Custom avatars
-user_avatar = "👤" # Simple user icon
-assistant_avatar = "🤖" # Robot icon for assistant
+# Define avatar for assistant and user
+zoomo_avatar = "assets/zoomo_bot.png"
 
 st.title("🤖 Zoomo's Copywriter")
 
@@ -45,14 +44,18 @@ The more details you share, the more *spot-on* your copy will be! So don't be la
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+    if message["role"] == "user":
+        with st.chat_message("user", avatar="👤"):
+            st.markdown(message["content"])
+    else:
+        with st.chat_message("assistant", avatar=zoomo_avatar):
+            st.markdown(message["content"])
 
 # Accept user input
 if prompt := st.chat_input("How can I help with your Zoomo copy today?"):
     # Add user message to session state and display it
     st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user"):
+    with st.chat_message("user", avatar="👤"):
         st.markdown(prompt)
 
     # Prepare data for n8n
