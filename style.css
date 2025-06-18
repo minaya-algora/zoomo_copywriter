@@ -3,14 +3,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
 /* Set main body font to Inter */
-body, p, li, div, span {
+body, p, div, span, li {
   font-family: 'Inter', sans-serif !important;
 }
 
-/* Set headings to Space Grotesk */
-h1, h2, h3, h4, h5, h6 {
+/* Only apply Space Grotesk to the main title (h1) */
+h1:first-of-type {
   font-family: 'Space Grotesk', sans-serif !important;
   font-weight: 700 !important;
+}
+
+/* Other headings remain in Inter */
+h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif !important;
 }
 
 /* Change the chat avatar colors to yellow */
