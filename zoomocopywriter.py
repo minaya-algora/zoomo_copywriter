@@ -7,13 +7,36 @@ import uuid # For generating session IDs
 N8N_WEBHOOK_URL = "https://ridezoomo.app.n8n.cloud/webhook/conversational-copy"
 # --- END CONFIGURATION ---
 
+# Set page config first (must be the first Streamlit command)
+st.set_page_config(
+    page_title="Zoomo's Copywriter",
+    page_icon="🤖",
+    layout="wide"
+)
+
+# Apply custom CSS for Zoomo branding
+with open("style.css") as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+
 # Initialize chat history and session ID in session_state
 if "messages" not in st.session_state:
     st.session_state.messages = [] # To store all messages {role: "user/assistant", content: "..."}
 if "sessionId" not in st.session_state:
     st.session_state.sessionId = str(uuid.uuid4()) # Generate a unique session ID for this browser session
 
-st.title("🤖 Zoomo AI Copywriter")
+st.title("🤖 Zoomo's Copywriter")
+
+# Add description and guidance
+st.markdown("""
+Hey there! I'm here to help you craft effective copy matching Zoomo's voice and brand guidelines. For best results, please include these details when requesting copy:
+
+- Target audience: Leads, Customers, Former Customers
+- Market(s): UK, ES, DE, AU, US, CA, FR, Global
+- Objective: Nurture, Onboarding, Promotion, Operational, Announcement, etc.
+- Language: English, Spanish, German, French, Arabic
+- Channel: Email, SMS, WhatsApp, Push Notification, Web Copy, Social Media, etc
+- Optional: Desired length, key points to include, specific tone
+""")
 
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
