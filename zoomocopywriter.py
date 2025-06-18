@@ -24,7 +24,7 @@ if "sessionId" not in st.session_state:
     st.session_state.sessionId = str(uuid.uuid4()) # Generate a unique session ID for this browser session
 
 # Define avatar for assistant and user
-zoomo_avatar = "assets/zoomo_bot.png"
+zoomo_avatar = "assets/zoomo_logo.png"
 
 st.title("🤖 Zoomo's Copywriter")
 
