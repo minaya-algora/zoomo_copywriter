@@ -13,12 +13,13 @@ st.set_page_config(
     page_icon="assets/zoomo_logo.png",  # Use the Zoomo logo as favicon
 )
 
-# SINGLE TITLE - using st.title() but with custom image
-col1, col2 = st.columns([0.05, 0.95])
-with col1:
-    st.image("assets/zoomo_logo.png", width=40)
-with col2:
-    st.markdown('<h1 id="zoomo-title" style="margin-top: 0;">Zoomo\'s Copywriter</h1>', unsafe_allow_html=True)
+# INLINE TITLE with logo using HTML/CSS for better control
+st.markdown("""
+<div style="display: flex; align-items: center; margin-bottom: 1rem;">
+    <img src="assets/zoomo_logo.png" style="height: 40px; margin-right: 10px;">
+    <h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif;">Zoomo's Copywriter</h1>
+</div>
+""", unsafe_allow_html=True)
 
 # Apply custom CSS for Zoomo branding
 with open("style.css") as f:
