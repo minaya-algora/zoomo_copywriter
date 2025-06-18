@@ -11,7 +11,6 @@ N8N_WEBHOOK_URL = "https://ridezoomo.app.n8n.cloud/webhook/conversational-copy"
 st.set_page_config(
     page_title="Zoomo's Copywriter",
     page_icon="🤖",
-    layout="wide"
 )
 
 # Apply custom CSS for Zoomo branding
@@ -28,14 +27,16 @@ st.title("🤖 Zoomo's Copywriter")
 
 # Add description and guidance
 st.markdown("""
-Hey there! I'm here to help you craft effective copy matching Zoomo's voice and brand guidelines. For best results, please include these details when requesting copy:
+Hey there! I'm here to help you craft killer Zoomo-branded content that converts. For the best results *(and to save us both some back-and-forth)*, please include in your request:
 
-- Target audience: Leads, Customers, Former Customers
-- Market(s): UK, ES, DE, AU, US, CA, FR, Global
-- Objective: Nurture, Onboarding, Promotion, Operational, Announcement, etc.
-- Language: English, Spanish, German, French, Arabic
-- Channel: Email, SMS, WhatsApp, Push Notification, Web Copy, Social Media, etc
-- Optional: Desired length, key points to include, specific tone
+- **Target audience**: Leads, Customers, Former Customers
+- **Market(s)**: UK, ES, DE, AU, US, CA, FR, Global
+- **Objective**: Nurture, Onboarding, Promotion, Operational, Announcement, etc.
+- **Language**: English, Spanish, German, French, Arabic
+- **Channel**: Email, SMS, WhatsApp, Push Notification, Web Copy, Social Media, etc
+- *Optional*: Desired length, key points to include, any other creative direction
+
+The more details you share, the more spot-on your copy will be! Let's create something awesome together ✨
 """)
 
 # Display chat messages from history on app rerun
