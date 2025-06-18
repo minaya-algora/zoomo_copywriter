@@ -23,6 +23,10 @@ if "messages" not in st.session_state:
 if "sessionId" not in st.session_state:
     st.session_state.sessionId = str(uuid.uuid4()) # Generate a unique session ID for this browser session
 
+# Custom avatars
+user_avatar = "👤" # Simple user icon
+assistant_avatar = "🤖" # Robot icon for assistant
+
 st.title("🤖 Zoomo's Copywriter")
 
 # Add description and guidance
