@@ -17,7 +17,7 @@ st.set_page_config(
 col1, col2 = st.columns([0.05, 0.95])
 with col1:
     # Display Zoomo logo image
-    st.image("assets/zoomo_bot.png", width=40)
+    st.image("assets/zoomo_logo.png", width=40)
 with col2:
     # Display title text
     st.markdown("# Zoomo's Copywriter")
