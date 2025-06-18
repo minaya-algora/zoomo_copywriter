@@ -50,7 +50,7 @@ The more details you share, the more *spot-on* your copy will be! So don't be la
 # Display chat messages from history on app rerun
 for message in st.session_state.messages:
     if message["role"] == "user":
-        with st.chat_message("user", avatar="👤"):
+        with st.chat_message("user", avatar="👩🏻"):
             st.markdown(message["content"])
     else:
         with st.chat_message("assistant", avatar=zoomo_avatar):
@@ -60,7 +60,7 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("How can I help with your Zoomo copy today?"):
     # Add user message to session state and display it
     st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user", avatar="👨🏻"):
+    with st.chat_message("user", avatar="👩🏻"):
         st.markdown(prompt)
 
     # Prepare data for n8n
