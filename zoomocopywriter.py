@@ -33,8 +33,6 @@ if "sessionId" not in st.session_state:
 # Define avatar for assistant and user
 zoomo_avatar = "assets/zoomo_logo.png"
 
-st.title("🤖 Zoomo's Copywriter")
-
 # Add description and guidance
 st.markdown("""
 Hey there! I'm here to help you craft killer Zoomo-branded content that converts. For the best results *(and to save us both some back-and-forth)*, please include in your request:
