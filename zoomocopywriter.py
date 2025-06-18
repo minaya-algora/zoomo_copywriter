@@ -13,6 +13,15 @@ st.set_page_config(
     page_icon="🤖",
 )
 
+# Create a clean title with logo
+col1, col2 = st.columns([0.05, 0.95])
+with col1:
+    # Display Zoomo logo image
+    st.image("assets/zoomo_bot.png", width=40)
+with col2:
+    # Display title text
+    st.markdown("# Zoomo's Copywriter")
+
 # Apply custom CSS for Zoomo branding
 with open("style.css") as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
