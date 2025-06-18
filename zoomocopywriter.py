@@ -13,7 +13,7 @@ st.set_page_config(
     page_icon="assets/zoomo_logo.png",  # Use the Zoomo logo as favicon
 )
 
-# Create a clean title with logo
+# Create a clean title with logo inline (ONLY TITLE - no duplicates)
 col1, col2 = st.columns([0.05, 0.95])
 with col1:
     # Display Zoomo logo image
