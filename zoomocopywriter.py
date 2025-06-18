@@ -76,7 +76,8 @@ if prompt := st.chat_input("How can I help with your Zoomo copy today?"):
     }
 
     # Display assistant response in chat message container
-    with st.chat_message("assistant"):
+    with st.chat_message("assistant", avatar=zoomo_avatar):
+
         message_placeholder = st.empty() # For "typing" effect
         full_response_text = ""
         try:
