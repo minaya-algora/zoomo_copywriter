@@ -60,7 +60,7 @@ for message in st.session_state.messages:
 if prompt := st.chat_input("How can I help with your Zoomo copy today?"):
     # Add user message to session state and display it
     st.session_state.messages.append({"role": "user", "content": prompt})
-    with st.chat_message("user", avatar="👤"):
+    with st.chat_message("user", avatar="👨🏻"):
         st.markdown(prompt)
 
     # Prepare data for n8n
